@@ -14,12 +14,11 @@
                     class="rounded-circle mr-1">
 
                 <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
-                <!-- Perbaikan kurung tutup -->
+
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-title">Logged in 5 min ago</div>
-                {{-- <a href="{{ route('profile.edit') }}" class="dropdown-item has-icon"> --}}
-                <a href="#" class="dropdown-item has-icon">
+                <a href="{{ route('profile.index') }}" class="dropdown-item has-icon">
                     <i class="far fa-user"></i> Profile
                 </a>
                 <div class="dropdown-divider"></div>
@@ -30,7 +29,7 @@
 
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                    <!-- Perbaikan kurung pada route logout -->
+
                     @csrf
                 </form>
             </div>
